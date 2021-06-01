@@ -11,10 +11,18 @@
         <img src="/img/nerds-logo.svg" alt="Логотип Нердс">
       </a>
       <ul>
-        <li><a href="/index.html">студия</a></li>
-        <li><a href="#nowhere">клиенты</a></li>
-        <li><a>магазин</a></li>
-        <li><a href="#nowhere">контакты</a></li>
+        <li>
+          <a href="/index.html">студия</a>
+        </li>
+        <li>
+          <a href="#nowhere">клиенты</a>
+        </li>
+        <li>
+          <a>магазин</a>
+        </li>
+        <li>
+          <a href="#nowhere">контакты</a>
+        </li>
       </ul>
       <a href="#nowhere">корзина</a>
     </nav>
@@ -29,7 +37,7 @@
           <input type="range" min="0" max="15000" step="1">
             </div>
             <ul>
-              <li">
+              <li>
                 <label>
                   <div>от<input type="text" value="0"></div>
                 </label>
@@ -84,50 +92,70 @@
         <button type="submit">Показать</button>
       </form>
     </section>
-    <section>
+    <div>
       <p>Сортировать:</p>
-      <a href="#nowhere">По цене</a>
-      <a href="#nowhere">По типу</a>
-      <a href="#nowhere">По названию</a>
-    </section>
+      <ul>
+        <li>
+          <a href="#nowhere">По цене</a>
+        </li>
+        <li>
+          <a href="#nowhere">По типу</a>
+        </li>
+        <li>
+          <a href="#nowhere">По названию</a>
+        </li>
+      </ul>
+    </div>
     <section>
       <h2>Шаблоны</h2>
       <ul>
         <li>
           <h3>Sedona</h3>
-          <p>Информационный сайт<br>для туристов</p>
+          <p>Информационный сайт для туристов</p>
           <a href="#nowhere">9900 ₱</a>
-          <img src="https://via.placeholder.com/150x100" alt="Картинка шаблона Sedona">
+          <div>
+            <img src="https://via.placeholder.com/150x100" alt="Шаблон Sedona">
+          </div>
         </li>
         <li>
           <h3>Pink App</h3>
-          <p>Продуктовый лендинг<br>приложения для iOS и Android</p>
+          <p>Продуктовый лендинг приложения для iOS и Android</p>
           <a href="#nowhere">9900 ₱</a>
-          <img src="https://via.placeholder.com/150x100" alt="Картинка шаблона Pink App">
+          <div>
+            <img src="https://via.placeholder.com/150x100" alt="Шаблон Pink App">
+          </div>
         </li>
         <li>
           <h3>Barbershop</h3>
-          <p>Сайт салона красоты<br>Для мужчин, да.</p>
+          <p>Сайт салона красоты. Для мужчин, да.</p>
           <a href="#nowhere">9900 ₱</a>
-          <img src="https://via.placeholder.com/150x100" alt="Картинка шаблона Barbershop">
+          <div>
+            <img src="https://via.placeholder.com/150x100" alt="Шаблон Barbershop">
+          </div>
         </li>
         <li>
           <h3>MISHKA</h3>
-          <p>Интернет-магазин<br>вязаных игрушек</p>
+          <p>Интернет-магазин вязаных игрушек</p>
           <a href="#nowhere">9900 ₱</a>
-          <img src="https://via.placeholder.com/150x100" alt="Картинка шаблона MISHKA">
+          <div>
+            <img src="https://via.placeholder.com/150x100" alt="Шаблон MISHKA">
+          </div>
         </li>
         <li>
           <h3>A Plus</h3>
           <p>Лендинг курсов повышения квалификации</p>
           <a href="#nowhere">9900 ₱</a>
-          <img src="https://via.placeholder.com/150x100" alt="Картинка шаблона A Plus">
+          <div>
+            <img src="https://via.placeholder.com/150x100" alt="Шаблон A Plus">
+          </div>
         </li>
         <li>
           <h3>КВАСТ</h3>
-          <p>Промо-сайт производителя<br>крафтового кваса</p>
+          <p>Промо-сайт производителя крафтового кваса</p>
           <a href="#nowhere">9900 ₱</a>
-          <img src="https://via.placeholder.com/150x100" alt="Картинка шаблона КВАСТ">
+          <div>
+            <img src="https://via.placeholder.com/150x100" alt="Шаблон КВАСТ">
+          </div>
         </li>
       </ul>
       <ul>
@@ -149,24 +177,28 @@
   <footer>
     <h2>Контакты</h2>
     <section>
-      <p>Nёrds design studio</p>
-      <p>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</p>
-      <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
-      <a href="form.html">Напишите нам</a>
-      <img src="https://via.placeholder.com/150x100" alt="Карта">
+      <div>
+        <p>Nёrds design studio</p>
+        <p>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</p>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        <a href="form.html">Напишите нам</a>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/150x100" alt="карта">
+      </div>
     </section>
     <section>
       <strong>Давайте дружить, это выгодно!</strong>
       <p>Скидка 10% для друзей из социальных сетей.</p>
       <ul>
         <li>
-          <a href="#nowhere">Вконтакте</a>
+          <a href="#nowhere" aria-label="вконтакте"></a>
         </li>
         <li>
-          <a href="#nowhere">Фейсбук</a>
+          <a href="#nowhere" aria-label="Фейсбук"></a>
         </li>
         <li>
-          <a href="#nowhere">Инстаграм</a>
+          <a href="#nowhere" aria-label="Инстаграм"></a>
         </li>
       </ul>
     </section>
