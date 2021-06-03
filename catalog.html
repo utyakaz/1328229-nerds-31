@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <title>Интернет магазин Нёрдс</title>
   </head>
   <body>
@@ -32,34 +33,46 @@
     <section>
       <h2>Фильтр готовых шаблонов</h2>
       <form method="get" action="https://echo.htmlacademy.ru">
-        <fieldset>
+        <fieldset class="filter-item">
           <legend>Стоимость:</legend>
-          <input type="range" min="0" max="15000" step="1">
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="
+                  width: 30%;
+                  margin-left: 20%
+                "></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="
+                left: 20%
+              "></div>
+              <div class="toggle toggle-max" tabindex="0" style="
+                left: 50%
+              "></div>
             </div>
-            <ul>
-              <li>
-                <label>
-                  <div>от<input type="text" value="0"></div>
-                </label>
-                <label>
-                  <div>до<input type="text" value="15000"></div>
-                </label>
-              </li>
-            </ul>
-        </fieldset>
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="15000">
+              </label>
+            </div>
+          </div>
+      </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
           <ul>
             <li>
-              <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+              <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked disabled>
               <label for="filter-adaptive">Адаптивная</label>
             </li>
             <li>
-              <input type="radio" name="grid" value="fixed" id="filter-fixed">
+              <input type="radio" name="grid" value="fixed" id="filter-fixed"disabled>
               <label for="filter-fixed">Фиксированная</label>
             </li>
             <li>
-              <input type="radio" name="grid" value="rubber" id="filter-rubber">
+              <input type="radio" name="grid" value="rubber" id="filter-rubber" disabled>
               <label for="filter-rubber">Резиновая</label>
             </li>
           </ul>
@@ -68,23 +81,23 @@
           <legend>Особенности:</legend>
           <ul>
             <li>
-              <input type="checkbox" name="slider" id="filter-slider" checked>
+              <input type="checkbox" name="slider" id="filter-slider" checked disabled>
               <label for="filter-slider">Слайдер</label>
             </li>
             <li>
-              <input type="checkbox" name="block-advantages" id="filter-block-advantages">
+              <input type="checkbox" name="block-advantages" id="filter-block-advantages" disabled>
               <label for="filter-block-advantages">Блок приемуществ</label>
             </li>
             <li>
-              <input type="checkbox" name="news" id="filter-news" checked>
+              <input type="checkbox" name="news" id="filter-news" checked disabled>
               <label for="filter-news">Новости</label>
             </li>
             <li>
-              <input type="checkbox" name="gallery" id="filter-gallery">
+              <input type="checkbox" name="gallery" id="filter-gallery" disabled>
               <label for="filter-gallery">Галерея</label>
             </li>
             <li>
-              <input type="checkbox" name="basket" id="filter-basket">
+              <input type="checkbox" name="basket" id="filter-basket" disabled>
               <label for="filter-basket">Корзина</label>
             </li>
           </ul>
@@ -94,6 +107,8 @@
     </section>
     <div>
       <p>Сортировать:</p>
+      <button type="button">вверх</button>
+      <button type="button">вниз</button>
       <ul>
         <li>
           <a href="#nowhere">По цене</a>
@@ -110,58 +125,100 @@
       <h2>Шаблоны</h2>
       <ul>
         <li>
-          <h3>Sedona</h3>
-          <p>Информационный сайт для туристов</p>
-          <a href="#nowhere">9900 ₱</a>
-          <div>
-            <img src="img/catalog/browser.png" width="360" height="40" alt="Меню браузера">
-            <img src="img/catalog/img-sedona-1.jpg" width="359" height="578" alt="Шаблон Sedona">
-          </div>
+          <article>
+            <div>
+              <a href="nowhere">
+                <h3>Sedona</h3>
+              </a>
+              <p>Информационный сайт для туристов</p>
+              <a href="#nowhere">9900 ₱</a>
+            </div>
+            <div>
+              <a href="nowhere">
+                <img src="img/catalog/img-sedona-1.jpg" width="359" height="578" alt="Шаблон Sedona">
+              </a>
+            </div>
+          </article>
         </li>
         <li>
-          <h3>Pink App</h3>
-          <p>Продуктовый лендинг приложения для iOS и Android</p>
-          <a href="#nowhere">9900 ₱</a>
-          <div>
-            <img src="img/catalog/browser.png" width="360" height="40" alt="Меню браузера">
-            <img src="img/catalog/img-pink-1.jpg" width="359" height="578" alt="Шаблон Pink App">
-          </div>
+          <article>
+            <div>
+              <a href="nowhere">
+                <h3>Pink App</h3>
+              </a>
+              <p>Продуктовый лендинг приложения для iOS и Android</p>
+              <a href="#nowhere">9900 ₱</a>
+            </div>
+            <div>
+              <a href="nowhere">
+                <img src="img/catalog/img-pink-1.jpg" width="359" height="578" alt="Шаблон Pink App">
+              </a>
+            </div>
+          </article>
         </li>
         <li>
-          <h3>Barbershop</h3>
-          <p>Сайт салона красоты. Для мужчин, да.</p>
-          <a href="#nowhere">9900 ₱</a>
-          <div>
-            <img src="img/catalog/browser.png" width="360" height="40" alt="Меню браузера">
-            <img src="img/catalog/img-barbershop-1.jpg" width="359" height="578" alt="Шаблон Barbershop">
-          </div>
+          <article>
+            <div>
+              <a href="nowhere">
+                <h3>Barbershop</h3>
+              </a>
+              <p>Сайт салона красоты. Для мужчин, да.</p>
+              <a href="#nowhere">9900 ₱</a>
+            </div>
+            <div>
+              <a href="nowhere">
+                <img src="img/catalog/img-barbershop-1.jpg" width="359" height="578" alt="Шаблон Barbershop">
+              </a>
+            </div>
+          </article>
         </li>
         <li>
-          <h3>MISHKA</h3>
-          <p>Интернет-магазин вязаных игрушек</p>
-          <a href="#nowhere">9900 ₱</a>
-          <div>
-            <img src="img/catalog/browser.png" width="360" height="40" alt="Меню браузера">
-            <img src="img/catalog/img-mishka-1.jpg" width="359" height="578" alt="Шаблон MISHKA">
-          </div>
+          <article>
+            <div>
+              <a href="nowhere">
+                <h3>Mishka</h3>
+              </a>
+              <p>Интернет-магазин вязаных игрушек</p>
+              <a href="#nowhere">9900 ₱</a>
+            </div>
+            <div>
+              <a href="nowhere">
+                <img src="img/catalog/img-mishka-1.jpg" width="359" height="578" alt="Шаблон MISHKA">
+              </a>
+            </div>
+          </article>
         </li>
         <li>
-          <h3>A Plus</h3>
-          <p>Лендинг курсов повышения квалификации</p>
-          <a href="#nowhere">9900 ₱</a>
-          <div>
-            <img src="img/catalog/browser.png" width="360" height="40" alt="Меню браузера">
-            <img src="img/catalog/img-aplus-1.jpg" width="359" height="578" alt="Шаблон A Plus">
-          </div>
+          <article>
+            <div>
+              <a href="nowhere">
+                <h3>A Plus</h3>
+              </a>
+              <p>Лендинг курсов повышения квалификации</p>
+              <a href="#nowhere">9900 ₱</a>
+            </div>
+            <div>
+              <a href="nowhere">
+                <img src="img/catalog/img-aplus-1.jpg" width="359" height="578" alt="Шаблон A Plus">
+              </a>
+            </div>
+          </article>
         </li>
         <li>
-          <h3>КВАСТ</h3>
-          <p>Промо-сайт производителя крафтового кваса</p>
-          <a href="#nowhere">9900 ₱</a>
-          <div>
-            <img src="img/catalog/browser.png" width="360" height="40" alt="Меню браузера">
-            <img src="img/catalog/img-kvast-1.jpg" width="359" height="578" alt="Шаблон КВАСТ">
-          </div>
+          <article>
+            <div>
+              <a href="nowhere">
+                <h3>Кваст</h3>
+              </a>
+              <p>Промо-сайт производителя крафтового кваса</p>
+              <a href="#nowhere">9900 ₱</a>
+            </div>
+            <div>
+              <a href="nowhere">
+                <img src="img/catalog/img-kvast-1.jpg" width="359" height="578" alt="Шаблон КВАСТ">
+              </a>
+            </div>
+          </article>
         </li>
       </ul>
       <ul>
@@ -182,18 +239,15 @@
   </main>
   <footer>
     <h2>Контакты</h2>
-    <section>
-      <div>
-        <p>Nёrds design studio</p>
-        <p>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</p>
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
+    <div>
+      <strong>Nёrds design studio</strong>
+      <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
+      <a href="tel:+78005558628">+7 800 555-86-28</a>
         <a href="form.html">Напишите нам</a>
-      </div>
-      <div>
-        <img src="img/map/map 1.jpg" width="1440" height="416" alt="карта">
-        <img src="img/map/map-marker-1.png" width="231" height="190" alt="Маркер на карте">
-      </div>
-    </section>
+    </div>
+    <div>
+      <img src="img/map/map 1.jpg" width="1440" height="416" alt="карта">
+    </div>
     <section>
       <strong>Давайте дружить, это выгодно!</strong>
       <p>Скидка 10% для друзей из социальных сетей.</p>
