@@ -2,8 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Интернет магазин Нёрдс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/img/favicon/icon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
   <header>
@@ -43,10 +47,10 @@
                   margin-left: 20%
                 "></div>
               </div>
-              <div class="toggle toggle-min" tabindex="0" style="
+              <div class="toggle toggle-min" tabindex="0" aria-label="ползунок влево" style="
                 left: 20%
               "></div>
-              <div class="toggle toggle-max" tabindex="0" style="
+              <div class="toggle toggle-max" tabindex="0" aria-label="ползунок вправо" style="
                 left: 50%
               "></div>
             </div>
@@ -59,21 +63,30 @@
               </label>
             </div>
           </div>
-      </fieldset>
+        </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
           <ul>
             <li>
-              <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked disabled>
-              <label for="filter-adaptive">Адаптивная</label>
+              <label>
+                <span>Адаптивная</span>
+                <input type="radio" name="grid" value="adaptive" disabled>
+                <span></span>
+              </label>
             </li>
             <li>
-              <input type="radio" name="grid" value="fixed" id="filter-fixed"disabled>
-              <label for="filter-fixed">Фиксированная</label>
+              <label>
+                <span>Фиксированная</span>
+                <input type="radio" name="grid" value="fixed" checked>
+                <span></span>
+              </label>
             </li>
             <li>
-              <input type="radio" name="grid" value="rubber" id="filter-rubber" disabled>
-              <label for="filter-rubber">Резиновая</label>
+              <label>
+                <span>Резиновая</span>
+                <input type="radio" name="grid" value="rubber">
+                <span></span>
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -81,24 +94,39 @@
           <legend>Особенности:</legend>
           <ul>
             <li>
-              <input type="checkbox" name="slider" id="filter-slider" checked disabled>
-              <label for="filter-slider">Слайдер</label>
+              <label>
+                <span>Слайдер</span>
+                <input type="checkbox" name="slider" checked>
+                <span></span>
+              </label>
             </li>
             <li>
-              <input type="checkbox" name="block-advantages" id="filter-block-advantages" disabled>
-              <label for="filter-block-advantages">Блок приемуществ</label>
+              <label>
+                <span>Блок приемуществ</span>
+                <input type="checkbox" name="block-advantages">
+                <span></span>
+              </label>
             </li>
             <li>
-              <input type="checkbox" name="news" id="filter-news" checked disabled>
-              <label for="filter-news">Новости</label>
+              <label>
+                <span>Новости</span>
+                <input type="checkbox" name="news" checked>
+                <span></span>
+              </label>
             </li>
             <li>
-              <input type="checkbox" name="gallery" id="filter-gallery" disabled>
-              <label for="filter-gallery">Галерея</label>
+              <label>
+                <span>Галерея</span>
+                <input type="checkbox" name="gallery" disabled>
+                <span></span>
+              </label>
             </li>
             <li>
-              <input type="checkbox" name="basket" id="filter-basket" disabled>
-              <label for="filter-basket">Корзина</label>
+              <label>
+                <span>Корзина</span>
+                <input type="checkbox" name="basket">
+                <span></span>
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -109,28 +137,28 @@
       <p>Сортировать:</p>
       <ul>
         <li>
-          <a href="#nowhere">По цене</a>
+          <a href="#price">По цене</a>
         </li>
         <li>
-          <a href="#nowhere">По типу</a>
+          <a href="#type">По типу</a>
         </li>
         <li>
-          <a href="#nowhere">По названию</a>
+          <a href="#name">По названию</a>
         </li>
       </ul>
-      <a href="nowhere">вверх</a>
-      <a href="nowhere">вниз</a>
+      <a href="#up" aria-label="вверх"></a>
+      <a href="#down" aria-label="вниз"></a>
     </div>
     <section>
       <h2>Шаблоны</h2>
       <ul>
         <li>
           <article>
-            <a href="nowhere">
+            <a href="#nowhere">
               <img src="img/catalog/img-sedona-1.jpg" width="359" height="578" alt="Шаблон Sedona">
             </a>
             <div>
-              <a href="nowhere">
+              <a href="#nowhere">
                 <h3>Sedona</h3>
               </a>
               <p>Информационный сайт для туристов</p>
@@ -140,11 +168,11 @@
         </li>
         <li>
           <article>
-            <a href="nowhere">
+            <a href="#nowhere">
               <img src="img/catalog/img-pink-1.jpg" width="359" height="578" alt="Шаблон Pink App">
             </a>
             <div>
-              <a href="nowhere">
+              <a href="#nowhere">
                 <h3>Pink App</h3>
               </a>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
@@ -154,11 +182,11 @@
         </li>
         <li>
           <article>
-            <a href="nowhere">
+            <a href="#nowhere">
               <img src="img/catalog/img-barbershop-1.jpg" width="359" height="578" alt="Шаблон Barbershop">
             </a>
             <div>
-              <a href="nowhere">
+              <a href="#nowhere">
                 <h3>Barbershop</h3>
               </a>
               <p>Сайт салона красоты. Для мужчин, да.</p>
@@ -168,11 +196,11 @@
         </li>
         <li>
           <article>
-            <a href="nowhere">
+            <a href="#nowhere">
               <img src="img/catalog/img-mishka-1.jpg" width="359" height="578" alt="Шаблон MISHKA">
             </a>
             <div>
-              <a href="nowhere">
+              <a href="#nowhere">
                 <h3>Mishka</h3>
               </a>
               <p>Интернет-магазин вязаных игрушек</p>
@@ -182,11 +210,11 @@
         </li>
         <li>
           <article>
-            <a href="nowhere">
+            <a href="#nowhere">
               <img src="img/catalog/img-aplus-1.jpg" width="359" height="578" alt="Шаблон A Plus">
             </a>
             <div>
-              <a href="nowhere">
+              <a href="#nowhere">
                 <h3>A Plus</h3>
               </a>
               <p>Лендинг курсов повышения квалификации</p>
@@ -196,11 +224,11 @@
         </li>
         <li>
           <article>
-            <a href="nowhere">
+            <a href="#nowhere">
               <img src="img/catalog/img-kvast-1.jpg" width="359" height="578" alt="Шаблон КВАСТ">
             </a>
             <div>
-              <a href="nowhere">
+              <a href="#nowhere">
                 <h3>Кваст</h3>
               </a>
               <p>Промо-сайт производителя крафтового кваса</p>
@@ -229,20 +257,16 @@
     <h2>Контакты</h2>
     <div>
       <div>
-        <img src="img/map/map-1.jpg" width="1440" height="416" alt="карта">
-      </div>
-      <div>
         <strong>Nёrds design studio</strong>
         <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
         <a href="tel:+78005558628">+7 800 555-86-28</a>
         <a href="form.html">Напишите нам</a>
       </div>
-    </div>
-    <section>
       <div>
-        <strong>Давайте дружить, это выгодно!</strong>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <img src="img/map/map.jpg" width="1440" height="416" alt="карта">
       </div>
+    </div>
+    <div>
       <ul>
         <li>
           <a href="#nowhere" aria-label="вконтакте"></a>
@@ -254,7 +278,11 @@
           <a href="#nowhere" aria-label="Инстаграм"></a>
         </li>
       </ul>
-    </section>
+      <div>
+        <strong>Давайте дружить, это выгодно!</strong>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
   </footer>
   </body>
 </html>
