@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Интернет магазин Нёрдс</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="/img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/img/favicon/icon180.png">
@@ -152,15 +152,15 @@
               </li>
             </ul>
             <ul class="sort__list sort__list_additional">
-              <li class="sort__item">
-                <a class="sort__up" href="#up" aria-label="вверх">
+              <li class="sort__item sort__item_additional">
+                <a class="sort__link sort__up" href="#up" aria-label="вверх">
                   <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L0 10h11L5.5 0z" fill="#231F20"/>
                   </svg>
                 </a>
               </li>
-              <li class="sort__item">
-                <a class="sort__down" href="#down" aria-label="вниз">
+              <li class="sort__item sort__item_additional">
+                <a class="sort__link sort__down" href="#down" aria-label="вниз">
                   <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 10L0 0h11" fill="#231F20"/>
                   </svg>
@@ -206,7 +206,7 @@
                   <a class="card__title" href="#nowhere">
                     <h3>Barbershop</h3>
                   </a>
-                  <p class="card__description">Сайт салона красоты. Для мужчин, да.</p>
+                  <p class="card__description">Сайт салона красоты.<br>Для мужчин, да.</p>
                   <a class="card__btn btn" href="#nowhere">9900 ₱</a>
                 </div>
               </article>
@@ -220,7 +220,7 @@
                   <a class="card__title" href="#nowhere">
                     <h3>Mishka</h3>
                   </a>
-                  <p class="card__description">Интернет-магазин вязаных игрушек</p>
+                  <p class="card__description">Интернет-магазин<br>вязаных игрушек</p>
                   <a class="card__btn btn" href="#nowhere">9900 ₱</a>
                 </div>
               </article>
@@ -333,6 +333,7 @@
           <input class="popup__field-input" type="email" name="email" placeholder="email@example.com" required>
         </label>
       </div>
+      <p class="popup__field-label">Текчт письма:</p>
       <textarea class="popup__textarea" placeholder="В свободной форме" required rows="4"></textarea>
       <button class="popup__btn btn" type="submit">отправить</button>
     </form>
