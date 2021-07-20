@@ -13,7 +13,7 @@
   </head>
   <body class="page__body">
     <header class="page__header page-header">
-      <div class="page__wrapper">
+      <div class="page__wrapper page-header__wrapper">
         <a class="page-header__logo">
           <img src="/img/nerds-logo.svg" width="160" height="66" alt="Нердс">
         </a>
@@ -32,8 +32,8 @@
               <a class="main-nav__link" href="#nowhere">контакты</a>
             </li>
           </ul>
-          <a class="main-nav__basket basket" href="#nowhere">корзина</a>
         </nav>
+        <a class="page-header__basket basket" href="#nowhere">корзина</a>
       </div>
     </header>
     <main class="page__main">
@@ -64,7 +64,7 @@
             </li>
             <li class="features__item slide">
               <div class="slide__text">
-                <strong class="slide__title">Только ночь, только хардкор</strong>
+                <strong class="slide__title">Только ночь,<br> только хардкор</strong>
                 <p class="slide__description">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
                 <a class="slide__btn btn btn_md" href="#nowhere">Узнать больше</a>
               </div>
@@ -104,7 +104,7 @@
                 <a class="offer__btn btn btn_green" href="#nowhere">Заказать</a>
               </article>
             </li>
-            <li class="services__list-item">
+            <li class="services__item">
               <article class="offer">
                 <div class="offer__img">
                   <img src="/img/services/presentations.jpg" width="300" height="146" alt="Схемы и диограммы на стенде для презентаций">
@@ -132,7 +132,7 @@
             <div class="info__logo">
               <img src="/img/logo/nerds-logo-color.png" width="360" height="208" alt="Логотип Нердс на цветном фоне">
             </div>
-            <strong class="info__subtitle subtitle_position">с 2004 года любим точность во всем:</strong>
+            <strong class="info__subtitle">с 2004 года любим точность во всем:</strong>
             <table class="info__table">
               <tr class="info__tr">
                 <td class="info__td">146<sup class="td__percent_superscript">%</sup></td>
@@ -188,7 +188,7 @@
           </div>
         </div>
         <div class="map-and-contacts__map">
-          <img src="/img/map/map.jpg" width="1440px" height="416px" alt="карта">
+          <img src="/img/map/map.jpg" width="1440" height="416" alt="карта">
         </div>
       </div>
       <div class="page__wrapper page-footer__wrapper">
@@ -236,9 +236,12 @@
             <input class="popup__field-input" type="email" name="email" placeholder="email@example.com" required>
           </label>
         </div>
-        <textarea class="popup__textarea" placeholder="В свободной форме" required rows="4"></textarea>
-        <button class="popup__btn btn" type="submit">отправить</button>
+        <label class="popup__field">
+          <span class="popup__field-label">Текст письма:</span>
+          <textarea class="popup__textarea" placeholder="В свободной форме" required rows="4"></textarea>
+        </label>
       </form>
+      <button class="popup__btn btn" type="submit">отправить</button>
     </div>
   </body>
 </html>
